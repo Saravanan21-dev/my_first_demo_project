@@ -1,10 +1,10 @@
-FROM python:3.13
+FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY requirement.txt
+COPY requirements.txt /app/
 
-RUN pip install -r requirement.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
